@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/popup.css">
+	</head>
+	<body>
+
+		<div style="min-width: 500px;">
+			<div class="row justify-content-md-center">
+				<div class="col-lg-8 col-md-10">
+					<div id="navArea">
+						<div class="clearfix"></div>
+						<span class="notes_box_head_title">Project Notes <small>for Codeable</small></span>
+						<span id="backButton" class="notes_box_head_back hidden"><img src="assets/icons/back.svg"/></span>
+						<div class="clearfix"></div>
+					</div>
+					<div id="root" class="container">
+							<div id="projectsView" class="hidden"></div>
+							<div id="notesView" class="hidden"></div>
+							<div id="loader" class="active">
+								<div><div class="spinner-grow secondary-color" role="status"> <span class="sr-only">Loading...</span> </div></div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="templates">
+			<template id="error">
+				<div class="error_container">
+					<div class="error_body">
+						<span class="error_icon" style="background-image:url('assets/icons/icon.svg')"></span>
+						<span class="error_text">{message}</span>
+					</div>
+				</div>
+			</template>
+			<template id="project">
+				<div class="single-project-card media text-muted pt-3" data-id="{id}">
+							<span class="bd-placeholder-img mr-2 rounded">
+								<svg class="" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="{color}"></rect><text x="50%" y="50%" fill="{color}" dy=".3em">32x32</text></svg>
+								<a class="view-project-notes" data-type="view" href="#">
+									<img src="assets/icons/view.svg"/>
+							</a>
+						</span>
+				      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+								<strong class="d-block text-gray-dark">#{id}</strong>
+								<span class="project-label">
+									{title}
+								</span>
+								<span class="project-actions"><a class="remove-project-notes" data-type="remove" href="#"><img src="assets/icons/remove.svg"/></a></span>
+				      </p>
+				 </div>
+			</template>
+			<template id="projectNote">
+				<div class="single-note-card toast" role="alert" aria-live="assertive" aria-atomic="true" data-id="{projectId}" data-key="{key}">
+				  <div class="toast-header">
+				    <svg class="bd-placeholder-img rounded mr-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="{color}"></rect></svg>
+				    <strong class="mr-auto">{label}</strong>
+				    <small>{time}</small>
+						<button type="button" class="ml-2 mb-1 close remove-project-single-note" data-dismiss="toast" aria-label="Close"><img src="assets/icons/remove.svg"/></button>
+				  </div>
+				  <div class="toast-body">{note}</div>
+				</div>
+			</template>
+		</div>
+		<script src="assets/js/popup.js"></script>
+	</body>
+</html>
