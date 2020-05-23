@@ -4,6 +4,8 @@ Store and retrieve project notes separately for each project in the comment box.
 
 _____________________________________________
 
-[Chrome Extension](https://chrome.google.com/webstore/detail/kdlhmpjpaehdknpcdmdphbamcmhehnjg)
+### Have an issue or suggestion?
+Feel free to share any issues or feature requests by creating an [issue](https://github.com/bomsn/codeable-project-notes/issues)
 
-[My Website](https://chrome.google.com/webstore/detail/kdlhmpjpaehdknpcdmdphbamcmhehnjg)
+### Want to contribute?
+Fork, change, send pull request!
